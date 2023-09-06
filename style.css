@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  justify-content: center;
+  background-color: #060b23;
+}
+
+.input-field {
+  position: relative;
+}
+
+.input-field input {
+  width: 350px;
+  height: 60px;
+  border-radius: 6px;
+  font-size: 1.2rem;
+  padding: 0 15px;
+  border: 2px solid #fff;
+  background: transparent;
+  color: #fff;
+  outline: none;
+}
+.input-field label {
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  transform: translateY(-50%);
+  color: #fff;
+  font-size: 1.2rem;
+  pointer-events: none;
+  transition: 0.3s;
+}
+input:focus {
+  border: 2px solid #18ffff;
+}
+input:focus ~ label,
+input:valid ~ label {
+  top: 0;
+  left: 1rem;
+  font-size: 1rem;
+  padding: 0 2px;
+  background: #060b23;
+}
